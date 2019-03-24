@@ -2,7 +2,6 @@
 from flask import Flask, jsonify, request, make_response
 
 # local
-# from database import db
 from database import add_person, get_person
 
 # initialize the flask app server
@@ -63,7 +62,7 @@ def act_on_response():
     print(req.get('queryResult'))
 
     action = req.get('queryResult').get('action')
-    print('ACTION', action)
+    # print('ACTION', action)
 
     # Person's name response
     if action == 'AddPerson.AddPerson-Name':
